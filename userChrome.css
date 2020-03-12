@@ -61,15 +61,21 @@
 /* https://www.reddit.com/r/firefox/comments/731vz1/userchromecss_hack_for_showing_close_button_on/ */
 .tabbrowser-tab:not([pinned]) .tab-close-button{ display:block !important; }
 
+.tabbrowser-tab .tab-close-button {
+	fill: #888 !important;
+}
+
 .tabbrowser-tab .tab-close-button:hover {
 	border: 1px solid rgb(130,132,198) !important;
 	border-radius: 4px !important;
 	color: #fff !important;
 	padding: 0px !important;
 	background: linear-gradient(rgb(205,208, 243) 0%, rgb(125,134,204) 41%, rgb(56,58,162) 40%, rgb(95,218,238) 100%);
+	
+	fill: #fff !important;
 }
 
-#new-tab-button, .tabs-newtab-button {
+#new-tab-button, #newtab-button, .tabs-newtab-button {
     background: linear-gradient(rgb(255,255,255) 0%, rgb(207,212,224) 51%, rgb(188,195,216) 50%, rgb(207,212,224) 100%) !important;
     border-radius: 3px 3px 0 0 !important;
 	border: 1px solid #aaa !important;
@@ -80,7 +86,7 @@
 	margin-top: 5px !important;
 	border-bottom: none !important;
 	
-	
+	fill: #888 !important;
 }
 
 #reload-button, #stop-button {
@@ -108,6 +114,12 @@
 #download-button, #downloads-button, 
 #downloads-button[attention="success"] > #downloads-indicator-anchor > #downloads-indicator-icon,
 #downloads-button[attention="success"] > #downloads-indicator-anchor > #downloads-indicator-progress-outer {
+	list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAIAAABPIytRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMySURBVDhPnVLbbxRVHD63md3ZS7MbZaFJISbEWkwFJNEQIkQTEh7kyRgVIwZCUAkFguiLmpj4D/jiMw+ACS8oiU+WBoxCQNYU2KJpGwRpiqaz7d5mdzqXc+GbMg8ai2n85szZs7853+/y/X50YnqB/AsvfV2hnDCxtGwsc2FnPf32NyxP3n62cuDF9xVRhEtF5bk/Tn+/YxkyS3//F5YnI1vDDBXGcI0dmS+Lx5AtvIowTbghwvD/ICsZ6dAtOX45t9iX7eVEm1oGkQ1HzeBrCObO3pq9W703eeX+9NW/Ziai0E/JRkXrBtYwws59e350bKyQz3ObEpEy4QKRV1cqsNu2bVmWk+GB74GYqK3C1vqnKoyyL3745OSdr3B1z/C+rm4tyLmmcTt6waPNpHJBdpN9L3uvF4tFIoqlJ9byQyMfMxKWSwW43LXhVcbJbHDPjWZ/6958EN/tkIVILIJGBXm778ibzmHP84QQjFkZp48RYwSngFJKK318y6dvPPPuTHgnEj63DbfSUQHzNXGQMSYEl1JqHRutmdaSUQNyr+e3Ox3G+YebPj/23GfMSjoE2cF8p3TsrdyIZdm9Xm9xMUQYo+Eh4u99cLTgUMfJxjJ23fkgDDnn21a/gvEc7/5IOd1f+Whv6YRUutFs1N26UhKRoJuwC/SXW7/3P5nN53NK6yiMmq220SZfyGeyzpnWl5SRPYWjXsdrNBpepw1mHMfQuVwuW06FVm9MripnEQ0maKZRTRxHUYRGEEoNMTgHvh8EAczYcQ3IZh0qiowSiXu12q/XrlWbzWa73fZ9HwVJiToiFcdQM5PJAradwep2A6xEYBnQ69XxtQMDj/ytHLXaBLdsOjr2U33uT8fJpeaVAfmvqvQLpFcs9g0ODmrMMkcX8SztXKBtmFl0X+LBFKC7PLoyd+rnszNbhnawfsowGJQyqY3CN2VwxyTDQjScLR2XhgcyQwPFGWvFjW++O19353GmFy5e7rQaoKUJrQAXL40+v/GFp58dotXxaR33UvNjoJNEFIpJ/z8Cd2htyr198/rU5G10lSUzTtG5ZEOfMfdJQnj/YYllNDQ0PLx560NbWLUEvqB7iQAAAABJRU5ErkJggg==') !important;
+}
+
+/* https://www.reddit.com/r/FirefoxCSS/comments/eod7at/download_button_in_navbar_color_change/ */
+#downloads-button[attention="success"] > .toolbarbutton-badge-stack > #downloads-indicator-anchor > #downloads-indicator-icon,
+#downloads-button[attention="success"] > .toolbarbutton-badge-stack > #downloads-indicator-anchor > #downloads-indicator-progress-outer {
 	list-style-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAWCAIAAABPIytRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMySURBVDhPnVLbbxRVHD63md3ZS7MbZaFJISbEWkwFJNEQIkQTEh7kyRgVIwZCUAkFguiLmpj4D/jiMw+ACS8oiU+WBoxCQNYU2KJpGwRpiqaz7d5mdzqXc+GbMg8ai2n85szZs7853+/y/X50YnqB/AsvfV2hnDCxtGwsc2FnPf32NyxP3n62cuDF9xVRhEtF5bk/Tn+/YxkyS3//F5YnI1vDDBXGcI0dmS+Lx5AtvIowTbghwvD/ICsZ6dAtOX45t9iX7eVEm1oGkQ1HzeBrCObO3pq9W703eeX+9NW/Ziai0E/JRkXrBtYwws59e350bKyQz3ObEpEy4QKRV1cqsNu2bVmWk+GB74GYqK3C1vqnKoyyL3745OSdr3B1z/C+rm4tyLmmcTt6waPNpHJBdpN9L3uvF4tFIoqlJ9byQyMfMxKWSwW43LXhVcbJbHDPjWZ/6958EN/tkIVILIJGBXm778ibzmHP84QQjFkZp48RYwSngFJKK318y6dvPPPuTHgnEj63DbfSUQHzNXGQMSYEl1JqHRutmdaSUQNyr+e3Ox3G+YebPj/23GfMSjoE2cF8p3TsrdyIZdm9Xm9xMUQYo+Eh4u99cLTgUMfJxjJ23fkgDDnn21a/gvEc7/5IOd1f+Whv6YRUutFs1N26UhKRoJuwC/SXW7/3P5nN53NK6yiMmq220SZfyGeyzpnWl5SRPYWjXsdrNBpepw1mHMfQuVwuW06FVm9MripnEQ0maKZRTRxHUYRGEEoNMTgHvh8EAczYcQ3IZh0qiowSiXu12q/XrlWbzWa73fZ9HwVJiToiFcdQM5PJAradwep2A6xEYBnQ69XxtQMDj/ytHLXaBLdsOjr2U33uT8fJpeaVAfmvqvQLpFcs9g0ODmrMMkcX8SztXKBtmFl0X+LBFKC7PLoyd+rnszNbhnawfsowGJQyqY3CN2VwxyTDQjScLR2XhgcyQwPFGWvFjW++O19353GmFy5e7rQaoKUJrQAXL40+v/GFp58dotXxaR33UvNjoJNEFIpJ/z8Cd2htyr198/rU5G10lSUzTtG5ZEOfMfdJQnj/YYllNDQ0PLx560NbWLUEvqB7iQAAAABJRU5ErkJggg==') !important;
 }
 
