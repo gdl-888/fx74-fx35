@@ -1,13 +1,13 @@
 .tabbrowser-tab {
-    border-radius: 3px 3px 0 0 !important;
-	width: 240px !important;
-	min-width: 240px !important;
-	border: 1px solid #aaa !important;
+	width: 250px !important;
+	min-width: 250px !important;
+	border: none !important;
+	background: transparent !important;
 }
 
 .tabbrowser-tab[selected="true"], .tabbrowser-tab:hover {
-	border: 1px solid #aaa !important;
-    border-radius: 5px 5px 0 0 !important;
+	border: none !important;
+	background: transparent !important;
 }
 
 
@@ -23,27 +23,35 @@
 
 
 .tabbrowser-tab {
-    border-bottom: none !important;
 	opacity: 1 !important;
-	height: 25px !important;
-	min-height: 25px !important;
-	max-height: 25px !important;
-	margin-top: 7px !important;
+	height: 24px !important;
+	min-height: 24px !important;
+	max-height: 24px !important;
+	margin-top: 5px !important;
 }
 
 .tabbrowser-tab[selected="true"], .tabbrowser-tab:hover {
 	opacity: 1 !important;
-	height: 27px !important;
-	min-height: 27px !important;
-	margin-top: 5px !important;
+	height: 25px !important;
+	min-height: 25px !important;
+	margin-top: 4px !important;
 }
 .tabbrowser-tab .tab-background {
+    border-radius: 2px 2px 0 0 !important;
+	border: 1px solid #aaa !important;
     background: linear-gradient(rgb(255,255,255) 0%, rgb(207,212,224) 51%, rgb(188,195,216) 50%, rgb(207,212,224) 100%);
-	border: none !important;
 }
 
-.tabbrowser-tab[selected="true"] .tab-background, .tab-background:hover {
-	border: none !important;
+.tabbrowser-tab .tab-background:hover {
+    border-radius: 2px 2px 0 0 !important;
+	border: 1px solid #aaa !important;
+    background: linear-gradient(rgb(255,255,255) 0%, rgb(237,242,254) 51%, rgb(218,225,246) 50%, rgb(237,242,254) 100%) !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-background {
+    border-radius: 5px 5px 0 0 !important;
+	border: 1px solid #aaa !important;
+    border-bottom: none !important;
     background: linear-gradient(rgb(250,250,250) 0%, rgb(246,246,246) 51%, rgb(232,232,232) 50%, rgb(239,239,239) 100%) !important;
 }
 
@@ -75,7 +83,35 @@
 	fill: #fff !important;
 }
 
-#new-tab-button, #newtab-button, .tabs-newtab-button {
+#new-tab-button {
+    background: linear-gradient(rgb(255,255,255) 0%, rgb(207,212,224) 51%, rgb(188,195,216) 50%, rgb(207,212,224) 100%) !important;
+    border-radius: 3px 3px 0 0 !important;
+	border: 1px solid #aaa !important;
+	-moz-image-region: auto !important;
+	color: #888 !important;
+	width: 25px !important;
+	height: 25px !important;
+	margin-top: 5px !important;
+	border-bottom: none !important;
+	
+	fill: #888 !important;
+}
+
+.tabs-newtab-button {
+    background: linear-gradient(rgb(255,255,255) 0%, rgb(207,212,224) 51%, rgb(188,195,216) 50%, rgb(207,212,224) 100%) !important;
+    border-radius: 3px 3px 0 0 !important;
+	border: 1px solid #aaa !important;
+	-moz-image-region: auto !important;
+	color: #888 !important;
+	width: 25px !important;
+	height: 25px !important;
+	margin-top: 5px !important;
+	border-bottom: none !important;
+	
+	fill: #888 !important;
+}
+
+.tabs-newtab-button + * {
     background: linear-gradient(rgb(255,255,255) 0%, rgb(207,212,224) 51%, rgb(188,195,216) 50%, rgb(207,212,224) 100%) !important;
     border-radius: 3px 3px 0 0 !important;
 	border: 1px solid #aaa !important;
@@ -125,23 +161,11 @@
 
 
 [tabsintitlebar]:root:not([extradragspace]) .tabbrowser-tab::after,
-.tabbrowser-tab:hover::after,
+.tabbrowser-tab:hover::after, .tabbrowser-tab::after,
 #tabbrowser-tabs:not([movingtab])>.tabbrowser-tab[beforehovered]::after {
-	
+	border: none !important;
 }
 
-
-   
-     #nav-bar { /* main toolbar */
-  background: rgb(211,218,237) !important;
-   }
-    #PersonalToolbar { /* bookmarks toolbar */
-   background: rgb(211,218,237) !important;
-   }
-   #TabsToolbar { /* tab bar */
-   background: linear-gradient(#fff 0%, rgb(227,232,244) 51%, rgb(208,215,236) 50%, rgb(227,232,244) 100%) !important;
- border-bottom: 2px solid #f8f8f8;
-   }
    
 /* https://www.reddit.com/r/FirefoxCSS/comments/9kvyca/make_forwardback_button_look_like_other_icons/ */
 /* Remove back button circle */
@@ -645,7 +669,7 @@ width: 42px !Important;
    }
    #TabsToolbar { /* tab bar */
    background: linear-gradient(#fff 0%, rgb(227,232,244) 51%, rgb(208,215,236) 50%, rgb(227,232,244) 100%) !important;
- border-bottom: 2px solid #f8f8f8 !important;
+ border-bottom: 3px solid rgb(239,239,239) !important;
    }
    
    menubar {
