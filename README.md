@@ -17,6 +17,8 @@ Codes from other sites are mentioned in the CSS code.
 - 브라우저 재시작.
 
 # 미리보기
+현재는 3.5와 더 비슷하게 모방되어 아래 미리보기와는 약간 다릅니다.
+
 Preview(미리보기):
 ![Preview Image](https://raw.githubusercontent.com/gdl-888/fx74-fx35/master/fx74prev.png)
 
