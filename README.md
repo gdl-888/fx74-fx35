@@ -7,6 +7,11 @@ Codes from other sites are mentioned in the CSS code.
 ## 한국어
 파이어폭스 74를 3.5처럼 보이게 만듭니다. 외부에서 퍼온 코드는 출처를 CSS 파일의 해당 부분에 표기했습니다. 다만 도구 모음 배경 등의 스타일은 Windows 7/Vista 기준으로, 다른 윈도우 혹은 테마를 적용했거나 화면 배색을 변경해도 스타일이 반영되지 않습니다.  
 
+### 특기사항
+- 파이어폭스 68, 75, Tor Browser 9.0.9에서 호환됨.
+- 파이어폭스 68, Tor Browser 9은 새 탭 단추에도 광택 그라데이션이 생기지만 파이어폰스 74는 그렇지 않음. 해결 시도 중.
+
+
 ### 적용 방법
 - `about:config`에 접속한다.
 - `toolkit.legacyUserProfileCustomizations.stylesheets`를 찾아 값을 `true`로 변경한다.
